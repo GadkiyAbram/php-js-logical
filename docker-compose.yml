@@ -1,6 +1,9 @@
 version: '3' #docker version
 services:
   www:
+    build:
+      context: .
+      dockerfile: Dockerfile
     image: php:apache
     volumes:
       - "./:/var/www/html" #sync project dir with container web dir
